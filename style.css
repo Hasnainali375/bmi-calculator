@@ -1,0 +1,214 @@
+/* Google Font Import - Modern & Athletic Look */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+  object-fit: cover;
+  filter: brightness(0.35) contrast(1.1); /* Dark overlay taake form clear dikhe */
+}
+
+/* Form Glass Effect Enhancement */
+form {
+  background: rgba(13, 15, 18, 0.75) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body {
+  background: #0d0f12;
+  background-image: radial-gradient(circle at top right, #1a2332, #0d0f12 70%);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Main Heading */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+  background: linear-gradient(90deg, #00ff88, #00e5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Form Container */
+form {
+  background: rgba(22, 27, 34, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form Labels */
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #a0aec0;
+  letter-spacing: 1px;
+  margin-bottom: -8px;
+  margin-top: 5px;
+}
+
+/* Inputs & Select Menus */
+input,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  background: #161b22;
+  border: 1.5px solid #2d3748;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+input::placeholder {
+  color: #718096;
+}
+
+input:focus,
+select:focus {
+  border-color: #00ff88;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+  background: #1c232d;
+}
+
+/* Custom Dropdown Styling */
+select option {
+  background: #161b22;
+  color: #ffffff;
+}
+
+/* High-Energy Glow Button */
+button {
+  margin-top: 15px;
+  padding: 16px;
+  background: linear-gradient(135deg, #00ff88, #00b894);
+  border: none;
+  border-radius: 10px;
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 255, 136, 0.4);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 255, 136, 0.6);
+  background: linear-gradient(135deg, #00e5ff, #00ff88);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Output Result Card */
+#totalbmi {
+  margin-top: 25px;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Dynamic Result Box Styling (Jab JS se Content Aaye) */
+#totalbmi:has(p) {
+  background: rgba(22, 27, 34, 0.9);
+  border-left: 5px solid #00ff88;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+#totalbmi h3 {
+  color: #00e5ff;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+#totalbmi hr {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 15px 0;
+}
+
+#totalbmi p {
+  font-size: 0.95rem;
+  color: #cbd5e0;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+#totalbmi b {
+  color: #00ff88;
+}
+
+#totalbmi ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+#totalbmi li {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+/* Smooth Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  form {
+    padding: 20px;
+  }
+}
